@@ -1,0 +1,38 @@
+// basic files import
+@import "./normalize.scss";
+@import "./variables.scss";
+@import "./break-points.scss";
+
+// components styles
+@import "./components/header.scss";
+@import "./components/banner.scss";
+@import "./components/about.scss";
+
+// default settings
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  font-size: 16px;
+}
+
+// container
+.container {
+  width: 1640px;
+  min-width: 1640px;
+  margin: 0 auto;
+  @include media("<=1440px") {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @include media("<=1280px") {
+    width: 976px;
+    min-width: 976px;
+  }
+  @include media("<=976px") {
+    width: 760px;
+    min-width: 760px;
+  }
+}
